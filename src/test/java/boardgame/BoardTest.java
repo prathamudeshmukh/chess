@@ -3,7 +3,6 @@ package boardgame;
 import boardgame.exceptions.OutOfBoardBoundsException;
 import boardgame.models.Coordinate;
 import boardgame.models.Player;
-import boardgame.pieces.Piece;
 import boardgame.pieces.Rook;
 import org.junit.Assert;
 import org.junit.jupiter.api.DisplayName;
