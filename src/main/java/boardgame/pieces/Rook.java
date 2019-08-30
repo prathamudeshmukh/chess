@@ -11,7 +11,7 @@ public class Rook implements Piece
 
     public Player getPlayer()
     {
-        return this.player;
+        return player;
     }
 
     public Rule getRule()

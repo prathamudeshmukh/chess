@@ -1,4 +1,4 @@
-package boardgame;
+package boardgame.board;
 
 import boardgame.exceptions.OutOfBoardBoundsException;
 import boardgame.models.Coordinate;
@@ -12,12 +12,12 @@ import org.junit.jupiter.api.Assertions;
 import static org.junit.Assert.assertNull;
 
 
-class BoardTest
+class ChessBoardTest
 {
     @DisplayName("Test if getSlot returns slot for coordinate")
     @Test
     void testIfGetSlotReturnsSlotForCoordinate() {
-        Board board = new Board();
+        ChessBoard board = new ChessBoard();
         Coordinate coordinate = new Coordinate(1, 2);
         try
         {
@@ -31,7 +31,7 @@ class BoardTest
     @DisplayName("Test if setPiece() slot for specific coordinate")
     @Test
     void testIfSetSlotForCoordinate() {
-        Board board = new Board();
+        ChessBoard board = new ChessBoard();
         Coordinate coordinate = new Coordinate(1, 2);
         Rook rook = new Rook(Player.WHITE);
         try
@@ -47,7 +47,7 @@ class BoardTest
     @DisplayName("Test if setPiece() throws exception for invalid column in coordinate")
     @Test
     void testIfSetPieceThrowsExceptionForInvalidColumnInCoordinate() {
-        Board board = new Board();
+        ChessBoard board = new ChessBoard();
         Coordinate coordinate = new Coordinate(10, 2);
         Rook rook = new Rook(Player.WHITE);
         Throwable exception = Assertions.assertThrows(OutOfBoardBoundsException.class, () -> {
@@ -59,7 +59,7 @@ class BoardTest
     @DisplayName("Test if setPiece() throws exception for invalid row in coordinate")
     @Test
     void testIfSetPieceThrowsExceptionForInvalidRowInCoordinate() {
-        Board board = new Board();
+        ChessBoard board = new ChessBoard();
         Coordinate coordinate = new Coordinate(6, 8);
         Rook rook = new Rook(Player.WHITE);
         Throwable exception = Assertions.assertThrows(OutOfBoardBoundsException.class, () -> {

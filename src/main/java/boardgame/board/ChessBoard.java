@@ -1,26 +1,24 @@
-package boardgame;
+package boardgame.board;
 
 import boardgame.exceptions.OutOfBoardBoundsException;
 import boardgame.models.*;
 import boardgame.pieces.Piece;
 
-public class Board
+public class ChessBoard implements Board
 {
     private Slot[][] board;
-    private static int MAX_COLUMN = 8;
-    private static int MAX_ROW = 8;
 
-    public Board() {
+    public ChessBoard() {
         board = new Slot[MAX_ROW][MAX_COLUMN];
     }
 
-    Slot get(Coordinate coordinate) throws OutOfBoardBoundsException
+    public Slot get(Coordinate coordinate) throws OutOfBoardBoundsException
     {
         validateCoordinate(coordinate);
         return board[coordinate.getRow()][coordinate.getColumn()];
     }
 
-    void setPiece(Coordinate coordinate, Piece piece) throws OutOfBoardBoundsException
+    public void setPiece(Coordinate coordinate, Piece piece) throws OutOfBoardBoundsException
     {
         validateCoordinate(coordinate);
         Slot slot = new Slot(coordinate, piece);
