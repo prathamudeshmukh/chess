@@ -74,4 +74,12 @@ public class CoordinateTest
         Coordinate otherCoordinate = new Coordinate(1, 3);
         assertFalse("Same coordinate should not be equal", coordinate.equals(otherCoordinate));
     }
+
+    @DisplayName("Test equals() returns false if different column coordinates passed")
+    @Test
+    void testEqualsReturnsFalseIfDifferentColumnCoordinatesPassed() {
+        Coordinate coordinate = new Coordinate(1, 2);
+        Coordinate otherCoordinate = new Coordinate(3, 2);
+        assertFalse("Same coordinate should not be equal", coordinate.equals(otherCoordinate));
+    }
 }
