@@ -1,4 +1,4 @@
 # Chess
-Chess Game Implementation - OOP
+Chess Game Implementation
 
-A Chess game implementation in chess to practice OOP and SOLID principles with TDD
+A Chess game implementation in JAVA to practice OOP and SOLID principles with TDD
