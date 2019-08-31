@@ -16,8 +16,24 @@ public class CoordinateTest
 
     @DisplayName("Test getRow() returns row index")
     @Test
-    void testGetColumnReturnsRowIndex() {
+    void testGetRowReturnsRowIndex() {
         Coordinate coordinate = new Coordinate(1, 2);
         assertEquals(2, coordinate.getRow());
+    }
+
+    @DisplayName("Test setRow() sets new row index")
+    @Test
+    void testSetRowSetsNewRowIndex() {
+        Coordinate coordinate = new Coordinate(1, 2);
+        coordinate.setRow(3);
+        assertEquals(3, coordinate.getRow());
+    }
+
+    @DisplayName("Test setColumn() sets new column index")
+    @Test
+    void testSetColumnSetsNewColumnIndex() {
+        Coordinate coordinate = new Coordinate(1, 2);
+        coordinate.setColumn(3);
+        assertEquals(3, coordinate.getColumn());
     }
 }
