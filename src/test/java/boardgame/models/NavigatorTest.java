@@ -29,5 +29,13 @@ class NavigatorTest
         assertEquals(expectedCurrentLocation, navigator.getCurrentLocation());
     }
 
-    
+    @DisplayName("Test next() returns false when boundary is reached for NORTH direction")
+    @Test
+    void testNextReturnsFalseWhenBoundaryIsReachdForNorthDirection()
+    {
+        Coordinate currentLocation = new Coordinate(4,0);
+        Navigator navigator = new Navigator(currentLocation, Direction.NORTH, BOUNDARY);
+        assertFalse(navigator.next());
+        assertEquals(currentLocation, navigator.getCurrentLocation(), "Current Location is not matching");
+    }
 }

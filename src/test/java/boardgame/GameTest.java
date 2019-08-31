@@ -8,7 +8,7 @@ import boardgame.pieces.Rook;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 public class GameTest
 {
@@ -20,7 +20,7 @@ public class GameTest
         Rook rook = new Rook(Player.WHITE);
         try
         {
-            assertNotNull(game.getAllowedMoves(coordinate));
+            assertNull(game.getAllowedMoves(coordinate));
         } catch (OutOfBoardBoundsException e)
         {
             e.printStackTrace();
