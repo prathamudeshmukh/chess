@@ -6,3 +6,5 @@ after_success:
   - bash <(curl -s https://codecov.io/bash)
 env:
   - CODECOV_TOKEN="5c02f361-e84d-4d71-af79-8ab98ae284a3"
+jdk:
+  - oraclejdk8
