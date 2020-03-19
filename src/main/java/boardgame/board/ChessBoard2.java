@@ -10,7 +10,6 @@ import java.util.HashMap;
 public class ChessBoard2 implements Board
 {
     HashMap<Coordinate, Slot> allPieces = new HashMap<>();
-
     @Override
     public Slot get(Coordinate coordinate) throws OutOfBoardBoundsException
     {
